@@ -1,8 +1,12 @@
-##迷你定向网页抓取器
+## 迷你定向网页抓取器
+
 在调研过程中，经常需要对一些网站进行定向抓取。由于python包含各种强大的库，使用python做定向抓取比较简单。请使用python开发一个迷你定向抓取器mini_spider.py，实现对种子链接的抓取，并把URL长相符合特定pattern的网页保存到磁盘上。
+
 程序运行: 
-python mini_spider.py -c spider.conf 
+```python mini_spider.py -c spider.conf ```
+
 配置文件spider.conf: 
+```
 [spider] 
 url_list_file: ./urls ; 种子文件路径 
 output_directory: ./output ; 抓取结果存储目录 
@@ -14,7 +18,9 @@ thread_count: 8 ; 抓取线程数
 种子文件每行一条链接，例如: 
 http://www.baidu.com 
 http://www.sina.com.cn 
+```
 要求和注意事项:
+```
 需要支持命令行参数处理。具体包含: -h(帮助)、-v(版本)、-c(配置文件)
 单个网页抓取或解析失败，不能导致整个程序退出。需要在日志中记录下错误原因并继续。
 当程序完成所有抓取任务后，必须优雅退出。
@@ -27,6 +33,9 @@ http://www.sina.com.cn
 完成相应的单元测试和使用demo。你的demo必须可运行，单元测试有效而且通过
 注意控制抓取间隔和总量，避免对方网站封禁百度IP。PS Python CM委员会为大家提供测试抓取网站: http://pycm.baidu.com:8081
 完成考试编程的一个简单指南：http://wiki.baidu.com/pages/viewpage.action?pageId=328311684
+```
+参考
+```
 提示(下面的python库可能对你完成测试题有帮助):
 re(正则表达式)
 参考: http://docs.python.org/2/library/re.html
@@ -55,3 +64,4 @@ logging(日志处理)
 参考: http://docs.python.org/2/library/logging.html
 参考: http://kenby.iteye.com/blog/1162698
 参考: http://my.oschina.net/leejun2005/blog/126713
+```
